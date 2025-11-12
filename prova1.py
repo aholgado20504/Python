@@ -1,3 +1,4 @@
+#Prova d'entrada de dades i operacions bàsiques
 a = float(input("Escriu el primer nombre: "))
 b = float(input("Escriu el segon nombre: "))
 c = float(input("Escriu el terçer nombre: "))
