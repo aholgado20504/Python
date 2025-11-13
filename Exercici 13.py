@@ -1,4 +1,4 @@
-# calculadora que permeti utilitzar totes les operacions en números enters i de punt flotant.
+# calculadora que permet utilitzar totes les operacions en números enters i de punt flotant.
 numero = input("Vols treballar amb nombres enters o de punt flotant? (e/f): ").lower()
 if numero == 'e':
     num1 = int(input("Introdueix el primer nombre enter: "))
