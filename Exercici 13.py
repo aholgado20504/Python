@@ -28,57 +28,45 @@ def menu_calculadora():
 # Calculadora decimal
 
 def calculadora_decimal(opcio):
+    num1=float(input("Introdueix el primer número real: "))
+    num2=float(input("Introdueix el segon número real: "))
     match(opcio):
         case 1:
             print("Estic pensant la suma!")
-            num1=int(input("Introdueix el primer número enter: "))
-            num2=int(input("Introdueix el segon número enter: "))
             print("El resultat de la suma és:", num1+num2)
         case 2:
             print("Estic pensant la resta!")
-            num1=int(input("Introdueix el primer número enter: "))
-            num2=int(input("Introdueix el segon número enter: "))
             print("El resultat de la resta és:", num1-num2)
         case 3:
             print("Estic pensant la multiplicació!")
-            num1=int(input("Introdueix el primer número enter: "))
-            num2=int(input("Introdueix el segon número enter: "))
             print("El resultat de la multiplicació és:", num1*num2)
         case 4:
             print("Estic pensant la divisió!")
-            num1=int(input("Introdueix el primer número enter: "))
-            num2=int(input("Introdueix el segon número enter: "))
             if num2!=0:
                 print("El resultat de la divisió és:", num1/num2)
             else:
                 print("Error: Divisió per zero no permesa. Ets tonto?")
         case 0:
-            print("Sortint de la calculadora decimal.\n")
+            print("Sortint de la calculadora decimal.")
         case _:
             print("Operació no vàlida.")
 
 # Calculadora real
 def calculadora_real(opcio):
+    num1=float(input("Introdueix el primer número real: "))
+    num2=float(input("Introdueix el segon número real: "))
     match(opcio):
         case 1:
-            print("Estic pensant la suma!")
-            num1=float(input("Introdueix el primer número real: "))
-            num2=float(input("Introdueix el segon número real: "))
+            print("Estic pensant la suma!\n")
             print("El resultat de la suma és:", num1+num2)
         case 2:
             print("Estic pensant la resta!")
-            num1=float(input("Introdueix el primer número real: "))
-            num2=float(input("Introdueix el segon número real: "))
             print("El resultat de la resta és:", num1-num2)
         case 3:
             print("Estic pensant la multiplicació!")
-            num1=float(input("Introdueix el primer número real: "))
-            num2=float(input("Introdueix el segon número real: "))
             print("El resultat de la multiplicació és:", num1*num2)
         case 4:
             print("Estic pensant la divisió!")
-            num1=float(input("Introdueix el primer número real: "))
-            num2=float(input("Introdueix el segon número real: "))
             if num2!=0:
                 print("El resultat de la divisió és:", num1/num2)
             else:
