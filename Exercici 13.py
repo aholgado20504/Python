@@ -1,29 +1,105 @@
-# Escriure una calculadora que permeti utilitzar totes les operacions en números enters i de punt flotant.
-numero = input("Vols emprar números enters (i) o de punt flotant (f)? ")
-if numero == 'i':
-    num1 = int(input("Introdueix el primer número enter: "))
-    num2 = int(input("Introdueix el segon número enter: "))
-elif numero == 'f':
-    num1 = float(input("Introdueix el primer número de punt flotant: "))
-    num2 = float(input("Introdueix el segon número de punt flotant: "))
-else:
-    print("Tipus de número no vàlid.")
-    exit()
-operacio = input("Introdueix l'operació (+, -, *, /, //, %, **): ")
-if operacio == '+':
-    resultat = num1 + num2
-elif operacio == '-':
-    resultat = num1 - num2
-elif operacio == '*':
-    resultat = num1 * num2
-elif operacio == '/':
-    resultat = num1 / num2
-elif operacio == '//':
-    resultat = num1 // num2
-elif operacio == '%':
-    resultat = num1 % num2
-elif operacio == '**':
-    resultat = num1 ** num2
-else:
-    resultat = "Operació no vàlida"
-print("El resultat és:", resultat)
+def menu_princial():
+    opcio = 0
+    while opcio<1 or opcio>3:
+        opcio = int(input(""" Elegeixi una opció:
+                        1. Calculadora decimal
+                        2. Calculadora real(floats)
+                        3. Sortir \n"""))
+        if opcio>0 and opcio<4:
+            return opcio
+        else:
+            print("Opció no vàlida, torna a provar!!\n")
+            return menu_princial()
+
+def menu_calculadora():
+    opcio=0
+    while opcio<1 or opcio>5:
+        opcio = int(input(""" Elegeixi una operació:
+                    1. Suma
+                    2. Resta
+                    3. Multiplicació
+                    4. Divisió
+                    5. Sortir \n"""))
+        if opcio>0 and opcio<6:
+            return opcio
+        else:
+            print("Operació no vàlida, torna a provar!!\n")
+            return menu_calculadora()
+# Calculadora decimal
+
+def calculadora_decimal(opcio):
+    match(opcio):
+        case 1:
+            print("Estic pensant la suma!")
+            num1=int(input("Introdueix el primer número enter: "))
+            num2=int(input("Introdueix el segon número enter: "))
+            print("El resultat de la suma és:", num1+num2)
+        case 2:
+            print("Estic pensant la resta!")
+            num1=int(input("Introdueix el primer número enter: "))
+            num2=int(input("Introdueix el segon número enter: "))
+            print("El resultat de la resta és:", num1-num2)
+        case 3:
+            print("Estic pensant la multiplicació!")
+            num1=int(input("Introdueix el primer número enter: "))
+            num2=int(input("Introdueix el segon número enter: "))
+            print("El resultat de la multiplicació és:", num1*num2)
+        case 4:
+            print("Estic pensant la divisió!")
+            num1=int(input("Introdueix el primer número enter: "))
+            num2=int(input("Introdueix el segon número enter: "))
+            if num2!=0:
+                print("El resultat de la divisió és:", num1/num2)
+            else:
+                print("Error: Divisió per zero no permesa. Ets tonto?")
+        case 0:
+            print("Sortint de la calculadora decimal.\n")
+        case _:
+            print("Operació no vàlida.")
+
+# Calculadora real
+def calculadora_real(opcio):
+    match(opcio):
+        case 1:
+            print("Estic pensant la suma!")
+            num1=float(input("Introdueix el primer número real: "))
+            num2=float(input("Introdueix el segon número real: "))
+            print("El resultat de la suma és:", num1+num2)
+        case 2:
+            print("Estic pensant la resta!")
+            num1=float(input("Introdueix el primer número real: "))
+            num2=float(input("Introdueix el segon número real: "))
+            print("El resultat de la resta és:", num1-num2)
+        case 3:
+            print("Estic pensant la multiplicació!")
+            num1=float(input("Introdueix el primer número real: "))
+            num2=float(input("Introdueix el segon número real: "))
+            print("El resultat de la multiplicació és:", num1*num2)
+        case 4:
+            print("Estic pensant la divisió!")
+            num1=float(input("Introdueix el primer número real: "))
+            num2=float(input("Introdueix el segon número real: "))
+            if num2!=0:
+                print("El resultat de la divisió és:", num1/num2)
+            else:
+                print("Error: Divisió per zero no permesa. Ets tonto?")
+        case 0:
+            print("Sortint de la calculadora real.\n")
+        case _:
+            print("Operació no vàlida.")
+
+# Programa principal
+op = 1
+while op!=0:
+    op = menu_princial()
+    if op==1:
+        # Calculadora decimal
+        print("Estic passant per sa calculadora decimal")
+        calculadora_decimal(menu_calculadora())
+    elif op==2:
+        # Calculadora real
+        print("Estic passant per sa calculadora real")
+        calculadora_real(menu_calculadora())
+    else:
+        print("Gràcies per emprar sa meva calculadora, fins prest\n")
+        op=0
