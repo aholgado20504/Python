@@ -1,5 +1,5 @@
 def es_vocal(caracter):
-    vocals = "aeiouAEIOU"
+    vocals = "aeiouAEIOUàáèéìíóòúù"
     if caracter in vocals and len(caracter) == 1:
         return True
     else:
