@@ -1,4 +1,3 @@
-# Definir una funció superposicio() que agafi dues llistes i retorni vertader si hi ha un element en comú, en cas contrari, que retorni fals.
 llista1 = input("Introdueix la primera llista d'elements separats per comes: ").split(',')
 llista2 = input("Introdueix la segona llista d'elements separats per comes: ").split(',')
 def superposicio(llista1, llista2):
