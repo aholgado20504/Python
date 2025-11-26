@@ -11,8 +11,8 @@ def multiplicar_llista(llista):
     return multiplicacio
 
 # Proves de les funcions
-print(sumar_llista([1, 2, 3, 4]))   # Ha de retornar 10
-print(sumar_llista([5, 10, 15]))    # Ha de retornar 30
-print(multiplicar_llista([1, 2, 3, 4])) # Ha de retornar 24
-print(multiplicar_llista([2, 3, 4]))    # Ha de retornar 24
-print(sumar_llista([-1, 1, -1, 1])) # Ha de retornar 0
+print(sumar_llista([1, 2, 3, 4]))
+print(sumar_llista([5, 10, 15]))
+print(multiplicar_llista([1, 2, 3, 4]))
+print(multiplicar_llista([2, 3, 4]))
+print(sumar_llista([-1, 1, -1, 1]))
