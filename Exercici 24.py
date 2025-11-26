@@ -1,4 +1,4 @@
-num = int(input("Introdueix quants punts vols a la llista: "))
+num = [1,2,3,4,5,6,7]
 def crear_punts(llista):
     for num in llista:
         print('.' * num)
