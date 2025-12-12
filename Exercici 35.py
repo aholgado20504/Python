@@ -7,4 +7,5 @@ def comptar_vocals(paraula):
     return comptadors
 #Exemple
 r = comptar_vocals("Ratapinyada")
+
 print(f"Hi ha {r['a']} a's, {r['e']} e's, {r['i']} i's, {r['o']} o's i {r['u']} u's")
